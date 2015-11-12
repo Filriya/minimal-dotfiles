@@ -62,10 +62,6 @@ set backspace=start,eol,indent
 set background=dark
 colorscheme desert
 
-nnoremap <Space>w  :<C-u>w<CR>
-nnoremap <Space>q  :<C-u>q<CR>
-nnoremap <Space>Q  :<C-u>q!<CR>
-
 nnoremap ;  :
 nnoremap :  ;
 vnoremap ;  :
