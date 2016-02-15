@@ -106,6 +106,27 @@ set -o vi
 #------------------------------------------------------------
 #  colors and prompt - 色・プロンプト
 #------------------------------------------------------------
+COLOR_RESET="\[\033[00m\]"
+
+COLOR_BLACK="\[\033[0;30m\]"
+COLOR_BLUE="\[\033[0;34m\]"
+COLOR_GREEN="\[\033[0;32m\]"
+COLOR_CYAN="\[\033[0;36m\]"
+COLOR_RED="\[\033[0;31m\]"
+COLOR_PURPLE="\[\033[0;35m\]"
+COLOR_LIGHT_GRAY="\[\033[0;37m\]"
+COLOR_DARK_GRAY="\[\033[1;30m\]"
+COLOR_LIGHT_BLUE="\[\033[1;34m\]"
+COLOR_LIGHT_GREEN="\[\033[1;32m\]"
+COLOR_LIGHT_CYAN="\[\033[1;36m\]"
+COLOR_LIGHT_RED="\[\033[1;31m\]"
+COLOR_LIGHT_PURPLE="\[\033[1;35m\]"
+COLOR_YELLOW="\[\033[1;33m\]"
+COLOR_WHITE="\[\033[1;37m\]"
+
+HOST_COLOR=$COLOR_LIGHT_CYAN
+USER_COLOR=$COLOR_LIGHT_RED
+PROMPT_COLOR=$COLOR_WHITE
 
 case "$TERM" in
     xterm-color) color_prompt=yes;;
@@ -135,14 +156,10 @@ fi
 
 
 if [ "$color_prompt" = yes ]; then
-  if [ -f $BASH_COMPLETION_DIR/git-completion.bash ]; then
     . $BASH_COMPLETION_DIR/git-completion.bash
     . $BASH_COMPLETION_DIR/git-prompt.sh
     export PS1='\[\033k\033\\\]'"$USER_COLOR\u$HOST_COLOR@\h$COLOR_RESET:$PROMPT_COLOR\w$COLOR_YELLOW"'$(__git_ps1)'"$COLOR_RESET\$ "
-  elif [ -f $BASH_COMPLETION_DIR/git ]; then
-    . $BASH_COMPLETION_DIR/git
-    export PS1='\[\033k\033\\\]'"$USER_COLOR\u$HOST_COLOR@\h$COLOR_RESET:$PROMPT_COLOR\w$COLOR_YELLOW"'$(__git_ps1)'"$COLOR_RESET\$ "
-  elif [ -f $BASH_COMPLETION_COMPAT_DIR/git-prompt ]; then
+  if [ -f $BASH_COMPLETION_COMPAT_DIR/git-prompt ]; then
     export PS1='\[\033k\033\\\]'"$USER_COLOR\u$HOST_COLOR@\h$COLOR_RESET:$PROMPT_COLOR\w$COLOR_YELLOW"'$(__git_ps1)'"$COLOR_RESET\$ "
   else
     export PS1='\[\033k\033\\\]'"$USER_COLOR\u$HOST_COLOR@\h$COLOR_RESET:$PROMPT_COLOR\w$COLOR_RESET\$ "
