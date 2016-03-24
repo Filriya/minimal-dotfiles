@@ -22,7 +22,7 @@ syntax enable
 set number
 set ruler
 set list
-set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<,eol:<
+set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 set incsearch
 set hlsearch
 set nowrap
@@ -44,13 +44,12 @@ set autoread
 set noswapfile
 set nobackup
 
-set showmode 
+set showmode
 set title
-set showcmd          
+set showcmd
 set laststatus=2
 set cursorline
 set wrap
-set list
 set display=uhex
 set nf=hex
 set splitbelow
