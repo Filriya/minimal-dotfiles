@@ -109,13 +109,13 @@ set fencs=utf-8,sjis,utf-16,ucs-bom,euc-jp,cp932,iso-2022-jp,ucs-2le,ucs-2,utf-8
 set ffs=unix,mac,dos
 
 " vimmer養成ギプス
-map <Up> <Nop>
-map <Down> <Nop>
-map <Left> <Nop>
-map <Right> <Nop>
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
+"map <Up> <Nop>
+"map <Down> <Nop>
+"map <Left> <Nop>
+"map <Right> <Nop>
+"inoremap <Up> <Nop>
+"inoremap <Down> <Nop>
+"inoremap <Left> <Nop>
+"inoremap <Right> <Nop>
 
 filetype plugin indent on
