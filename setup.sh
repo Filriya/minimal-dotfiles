@@ -7,6 +7,6 @@ for dotfile in .?*
 do
   if [ $dotfile != '..' ] && [ $dotfile != '.git' ] && [ $dotfile != '.gitignore' ]
   then
-    ln -Fs "$PWD/$dotfile" $HOME
+    ln -nfs "$PWD/$dotfile" $HOME
   fi
 done
