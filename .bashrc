@@ -181,6 +181,11 @@ export VTE_CJK_WIDTH=wide
 #  execution path - 実行パス
 #------------------------------------------------------------
 
+#screenの自動実行
+if [ $SHLVL = '1' ]; then
+  screen -U -xR -S $USER
+fi
+
 export PATH=~/bin/:~/bin/du-bin/:~/bin/vendor/:local/bin:~/usr/local/bin:"$PATH"
 
 

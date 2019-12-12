@@ -1,0 +1,5 @@
+#!/bin/sh
+rm dotfiles bin
+ln -sf ~/dotfiles.$1 dotfiles
+ln -sf ~/bin.$1 bin
+
