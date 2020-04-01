@@ -149,11 +149,6 @@ if [ -f "$HOME/.bash_colors" ]; then
   . "$HOME/.bash_colors"
 fi
 
-# local color definition
-if [ -f "$HOME/.bash_local" ]; then
-  . "$HOME/.bash_local"
-fi
-
 
 if [ "$color_prompt" = yes ]; then
     . $BASH_COMPLETION_DIR/git-completion.bash
@@ -166,6 +161,16 @@ if [ "$color_prompt" = yes ]; then
   fi
 else
   export PS1="\u@\h\[\033[01;33m\] \w \n\$$COLOR_RESET "
+fi
+
+# local color definition
+if [ -f "$HOME/.bash_colors.local" ]; then
+  . "$HOME/.bash_colors.local"
+fi
+
+# local color definition
+if [ -f "$HOME/.bash_local" ]; then
+  . "$HOME/.bash_local"
 fi
 
 unset color_prompt force_color_prompt
