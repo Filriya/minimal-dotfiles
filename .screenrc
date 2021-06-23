@@ -36,6 +36,3 @@ hardstatus off
 
 #文字幅問題
 cjkwidth on
-
-source '.screenrc.local'
-
